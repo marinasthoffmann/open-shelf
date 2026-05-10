@@ -1,16 +1,24 @@
-import './style.css';
 import logo from '../../images/logo.svg';
+import styled from 'styled-components';
+
+const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+`;
+
+const LogoImg = styled.img`
+  width: 150px;
+  height: auto;
+  margin-right: -40px;
+`;
 
 function Logo() {
     return (
-        <div className='logo'>
-          <img 
-            src={logo} 
-            alt='logo' 
-            className='logo-img'
-          ></img>
+        <LogoContainer>
+          <LogoImg src={logo} alt='logo' />
           <p><strong>Open</strong>Shelf</p>
-        </div>
+        </LogoContainer>
     )
 };
 
